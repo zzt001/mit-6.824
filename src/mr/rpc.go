@@ -23,7 +23,15 @@ type ExampleReply struct {
 }
 
 // Add your RPC definitions here.
+type TaskArgs struct {
 
+}
+
+type TaskReply struct {
+	// -2 as please exit, -1 as wait for 1 sec, 0 as map, 1 as reduce
+	Task Task
+	NReduce int
+}
 
 // Cook up a unique-ish UNIX-domain socket name
 // in /var/tmp, for the master.
